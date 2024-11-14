@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
+        a{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #accdce;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #ffffff;
-            background-image: url(/Images/Forest.jpg);
+            background-image: url(/Images/Rotterdam.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            backdrop-filter: blur(4px);
             margin: 0;
             padding: 0;
-            color: #000000;
+            color: #ffffff;
         }
         header, section, footer {
             max-width: 800px;
@@ -21,15 +29,16 @@
             padding: 20px;
         }
         header {
-            background-color: rgba(67, 34, 0, 0.817);
-            color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.615);
+            border: 2px, white, dashed;
             text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 10px;
         }
         section {
-            background: rgba(67, 34, 0, 0.817);
+            background: rgba(0, 0, 0, 0.615);
+            border: 2px, white, dashed;
             padding: 20px;
             margin-top: 10px;
             border-radius: 8px;
@@ -39,7 +48,6 @@
             text-align: center;
             padding: 10px;
             font-size: 0.9em;
-            color: #000000;
         }
     </style>
 </head>
@@ -63,9 +71,9 @@
     <p>If you'd like to connect, feel free to reach out via:</p>
     <ul>
         <li>Email: Soufyan9070@hotmail.com</li>
-        <li><a href="https://github.com/Soufboef" target="_blank">Github (Personal)</a></li>
-        <li><a href="https://github.com/GLRSoufyan" target="_blank">Github (School)</a></li>
-        <li><a href="https://www.linkedin.com/in/soufyan-boulakhrif-131958324/" target="_blank">LinkedIn</a></li>
+        <li><a onclick="window.document.location = 'https://github.com/Soufboef'" target="_blank">Github (Personal)</a></li>
+        <li><a onclick="window.document.location = 'https://github.com/GLRSoufyan'" target="_blank">Github (School)</a></li>
+        <li><a onclick="window.document.location = 'https://www.linkedin.com/in/soufyan-boulakhrif-131958324/'" target="_blank">LinkedIn</a></li>
     </ul>
 </section>
 
