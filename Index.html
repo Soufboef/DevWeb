@@ -5,81 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-        a{
-            cursor: pointer;
-            text-decoration: underline;
+        :root {
+            --bg-color: #00000098;
+            --text-color: #f4f4f4;
+            --link-hover: #accdce;
         }
-        a:hover {
-            color: #accdce;
+        body.dark-mode {
+            --bg-color: #ffffff7a;
+            --text-color: #1f1f1f;
+            --link-hover: #4CAF50;
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
             background-image: url(/Images/Rotterdam.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             backdrop-filter: blur(4px);
+            background-repeat: no;
             margin: 0;
             padding: 0;
-            color: #ffffff;
         }
-        header, section, footer {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.615);
-            border: 2px, white, dashed;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-        }
+        a { color: var(--text-color); cursor: pointer; text-decoration: underline; }
+        a:hover { color: var(--link-hover); }
         section {
-            background: rgba(0, 0, 0, 0.615);
-            border: 2px, white, dashed;
-            padding: 20px;
             margin-top: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
+        header, section {
+        width: 100%;
+        max-width: 80%;
+        margin-left: 9%;
+        padding: 20px;
+        background: var(--bg-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
         }
+        header { text-align: center; }
+        footer { color: #f4f4f4; text-align: center; font-size: 0.9em; }
+        .theme-toggle { cursor: pointer; padding: 10px; float: right; }
     </style>
 </head>
 <body>
 
+<div class="theme-toggle" onclick="toggleTheme()">🌞/🌜</div>
+
 <header>
-    <h1>Welcome to My Personal Page</h1>
+    <h1 id="greeting">Hello! I am Soufyan</h1>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>Hi! My name is Soufyan, and I’m passionate about game development, web design, psychology and art 
+    <p>Hi! My name is Soufyan, and I’m passionate about game development, web design, psychology, and art.
     I’m currently a student at <i>Grafisch Lyceum Rotterdam</i> and I love creating interactive, engaging websites for people. 
     When I'm not working on projects, I enjoy gaming with friends and listening to music.</p>
 
     <h2>My Journey</h2>
     <p>I started my journey in Roblox Studio when I was 14, and since then, I've been exploring new ways to bring my ideas to life. 
-    I’ve worked on a magic PVP/RPG game called 'Incantus Sorcerers' and I am always looking for new challenges to grow my skills.</p>
+    I’ve worked on a magic PVP/RPG game called 'Incantus Sorcerers' and am always looking for new challenges to grow my skills.</p>
 
     <h2>Contact Me</h2>
     <p>If you'd like to connect, feel free to reach out via:</p>
     <ul>
-        <li>Email: Soufyan9070@hotmail.com</li>
-        <li><a onclick="window.document.location = 'https://github.com/Soufboef'" target="_blank">Github (Personal)</a></li>
-        <li><a onclick="window.document.location = 'https://github.com/GLRSoufyan'" target="_blank">Github (School)</a></li>
-        <li><a onclick="window.document.location = 'https://www.linkedin.com/in/soufyan-boulakhrif-131958324/'" target="_blank">LinkedIn</a></li>
+        Soufyan9070@hotmail.com
+        <br><a onclick="window.document.location = 'https://github.com/Soufboef'" target="_blank">Github (Personal)</a>
+        <br><a onclick="window.document.location = 'https://github.com/GLRSoufyan'" target="_blank">Github (School)</a>
+        <br><a onclick="window.document.location = 'https://www.linkedin.com/in/soufyan-boulakhrif-131958324/'" target="_blank">LinkedIn</a>
     </ul>
 </section>
 
 <footer>
     <p>&copy; Soufyan Boulakhrif 2024. All rights reserved.</p>
 </footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
 
 </body>
 </html>
