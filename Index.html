@@ -4,49 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <style>
-        :root {
-            --bg-color: #00000098;
-            --text-color: #f4f4f4;
-            --link-hover: #accdce;
-        }
-        body.dark-mode {
-            --bg-color: #ffffff7a;
-            --text-color: #1f1f1f;
-            --link-hover: #4CAF50;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: all 0.3s ease;
-            background-image: url(/Images/Rotterdam.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            backdrop-filter: blur(4px);
-            background-repeat: no;
-            margin: 0;
-            padding: 0;
-        }
-        a { color: var(--text-color); cursor: pointer; text-decoration: underline; }
-        a:hover { color: var(--link-hover); }
-        section {
-            margin-top: 10px;
-        }
-        header, section {
-        width: 100%;
-        max-width: 80%;
-        margin-left: 9%;
-        padding: 20px;
-        background: var(--bg-color);
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        }
-        header { text-align: center; }
-        footer { color: #f4f4f4; text-align: center; font-size: 0.9em; }
-        .theme-toggle { cursor: pointer; padding: 10px; float: right; }
-    </style>
+    <link rel="stylesheet" href="CSS/Styles.css">
 </head>
 <body>
 
@@ -80,11 +38,6 @@
     <p>&copy; Soufyan Boulakhrif 2024. All rights reserved.</p>
 </footer>
 
-<script>
-    function toggleTheme() {
-        document.body.classList.toggle("dark-mode");
-    }
-</script>
-
+<script src="Scripts/script.js"></script>
 </body>
 </html>
